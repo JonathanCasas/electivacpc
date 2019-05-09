@@ -1,0 +1,70 @@
+<!DOCTYPE tiles-definitions PUBLIC  
+       "-//Apache Software Foundation//DTD Tiles Configuration 3.0//EN"  
+       "http://tiles.apache.org/dtds/tiles-config_3_0.dtd">  
+<tiles-definitions>  
+    <!-- Base Define -->
+    <definition name="base.definition" 
+                template="/WEB-INF/jsp/layouts/_layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/_header.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/_footer.jsp" />  
+        <put-attribute name="js" value="" />
+    </definition>  
+    <!-- Home Page  -->
+    <definition name="home" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/index.jsp" />  
+    </definition>   
+    <definition name="multiplex" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/multiplex.jsp" />  
+    </definition> 
+    <definition name="pelicula" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/pelicula.jsp" />  
+        <put-attribute name="js" value="/WEB-INF/jsp/frontend/js/js.jsp" />  
+    </definition> 
+    <definition name="carrito" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/carrito.jsp" />  
+    </definition>
+    <definition name="vacio" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/carrito-vacio.jsp" />  
+    </definition>
+    <definition name="snacks" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/productos.jsp" />  
+        <put-attribute name="js" value="/WEB-INF/jsp/frontend/js/producto-js.jsp" />  
+    </definition>
+    <definition name="finalizar" extends="base.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/frontend/finalizar.jsp" />   
+    </definition>
+    <!-- Base Define -->
+    <definition name="admin.definition" 
+                template="/WEB-INF/jsp/layouts/_layout.jsp">  
+        <put-attribute name="title" value="" />  
+        <put-attribute name="header" value="/WEB-INF/jsp/layouts/admin/_header.jsp" />  
+        <put-attribute name="body" value="" />  
+        <put-attribute name="footer" value="/WEB-INF/jsp/layouts/admin/_footer.jsp" />  
+        <put-attribute name="js" value="" />
+    </definition>  
+    <definition name="admin.index" extends="admin.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/index.jsp" />   
+    </definition>
+    <definition name="admin.empleados.index" extends="admin.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/empleados/index.jsp" />   
+    </definition>
+    <definition name="admin.empleados.create" extends="admin.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/empleados/create.jsp" />   
+    </definition>
+    <definition name="admin.empleados.trasladar" extends="admin.definition">  
+        <put-attribute name="title" value="Home Page" />  
+        <put-attribute name="body" value="/WEB-INF/jsp/admin/empleados/trasladar.jsp" />   
+    </definition>
+</tiles-definitions> 
